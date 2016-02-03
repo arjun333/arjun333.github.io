@@ -3,14 +3,42 @@
 	<head>
 		<title>An Element</title>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="../css/site.css">
+		<link rel="stylesheet" type="text/css" href="../css/element.css">
 		<script type="text/javascript" src="../js/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="../js/site.js"></script>
+		<script type="text/javascript" src="../js/element.js"></script>
 	</head>
-	<body>
-		<p class="headingText">This Page is Still Under Maintenance...</p>
-		<p class="headingText">Please Come Back Later!</p>
-		<p class="headingText">Go Back <a href="../index.html"><span class="glyphicon glyphicon-circle-arrow-left mendeleevList"></span></a></p>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span> 
+		    </button>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		 	<div class="container-fluid">
+		 		<ul class="nav navbar-nav">
+		 			<li class="active"><a href="#main" class="main">Elements</a></li>
+		 			<li><a href="#matter" class="matter">What is Matter Made Of?</a></li>
+		 			<li><a href="#atom" class="">The Atom</a></li>
+		 			<li><a href="../index.html" class="periodic">History of the Periodic Table</a></li>
+		 		</ul>
+			</div>
+		</div>
+		</nav>
+		<div class="container jumbotron" id="main">
+			<p class="headingText">An Element</p>
+			<img src="../res/AtomicStructure/nucleus.jpeg" align="left" style="padding-right: 20px">
+			<p>Well what is an element? It is a pure substance, something that cannot be broken down into smaller parts. Theoretically, it
+				can be broken down into smaller parts, but it would lose its properties. It will break down into protons, neutrons, and electrons.
+				Subsequently, these subatomic particles can be broken down into quarks and leptons.<p>
+		</div>
+		<div class="container jumbotron" id="matter">
+			<p class="headingText">What is Matter?</p>
+			<img src="../res/AtomicStructure/matterMatters.jpg" align="right" style"padding-left: 20px">
+			<p>What are all these particles? The name "quark" might sound funny, but it is fundamental part of matter. Lets start with easiest concept
+				to understand, matter. Anything that occupies space is considered to be made of matter. A computer, or any electronical device that you are using to view this, takes up space, so therefore it is made of matter. To take up space means to have a volume and a mass. Matter is <b>always</b> made of atoms.</p>
+		</div>
+		<!-- <p align="right" id="BackToTop" style="padding-right: 20px">Back to Top <a href="#" class="scrollup"><span class="glyphicon glyphicon-circle-arrow-up"></span></a></p> -->
 	</body>
 </html>

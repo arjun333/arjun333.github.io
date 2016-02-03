@@ -8,10 +8,6 @@ img.element{
 #PeriodicTable{
 	width: 1500px;
 	height: 975px;
-]}
-#Break{
-	height: 250px;
-	width: 1500px;
 }
 .headingText {
     font-size: 5em!important;
@@ -20,5 +16,5 @@ img.element{
     font-size: 140%;
 }
 #BackToTop{
-    font-size: 120%
+    font-size: 120%;
 }

@@ -9,12 +9,12 @@ img.element{
 	width: 1500px;
 	height: 975px;
 }
-.headingText {
+.largeFont{
     font-size: 5em!important;
 }
 .mendeleevList{
     font-size: 140%;
 }
 #BackToTop{
-    font-size: 120%;
+    font-size: 140%;
 }

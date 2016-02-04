@@ -20,25 +20,47 @@
 		 		<ul class="nav navbar-nav">
 		 			<li class="active"><a href="#main" class="main">Elements</a></li>
 		 			<li><a href="#matter" class="matter">What is Matter Made Of?</a></li>
-		 			<li><a href="#atom" class="">The Atom</a></li>
-		 			<li><a href="../index.html" class="periodic">History of the Periodic Table</a></li>
+		 				<li class="dropdown">
+		                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hierarchy of an Atom<span class="caret"></span></a>
+		                    <ul class="dropdown-menu">
+		                    	<li><a href="#atom" class="atom">The Atom</a>
+		                        <li><a href="#quark" class="quark">Quarks</a></li>
+		                        <li><a href="#lepton" class="lepton">Leptons</a></li>
+		                        <li><a href="#antiparticle" class="antiparticle">Anti-Particles</a></li>
+		                    </ul>
+	                    </li>
+                	</li>
+                    <li><a href="../index.html" class="periodic">History of the Periodic Table</a></li>
 		 		</ul>
 			</div>
 		</div>
 		</nav>
+		<br>
 		<div class="container jumbotron" id="main">
-			<p class="headingText">An Element</p>
+			<p class="largeFont">An Element</p>
 			<img src="../res/AtomicStructure/nucleus.jpeg" align="left" style="padding-right: 20px">
 			<p>Well what is an element? It is a pure substance, something that cannot be broken down into smaller parts. Theoretically, it
 				can be broken down into smaller parts, but it would lose its properties. It will break down into protons, neutrons, and electrons.
 				Subsequently, these subatomic particles can be broken down into quarks and leptons.<p>
 		</div>
 		<div class="container jumbotron" id="matter">
-			<p class="headingText">What is Matter?</p>
+			<p class="largeFont">What is Matter?</p>
 			<img src="../res/AtomicStructure/matterMatters.jpg" align="right" style"padding-left: 20px">
 			<p>What are all these particles? The name "quark" might sound funny, but it is fundamental part of matter. Lets start with easiest concept
 				to understand, matter. Anything that occupies space is considered to be made of matter. A computer, or any electronical device that you are using to view this, takes up space, so therefore it is made of matter. To take up space means to have a volume and a mass. Matter is <b>always</b> made of atoms.</p>
 		</div>
-		<!-- <p align="right" id="BackToTop" style="padding-right: 20px">Back to Top <a href="#" class="scrollup"><span class="glyphicon glyphicon-circle-arrow-up"></span></a></p> -->
+		<div class="container jumbotron" id="atom">
+			<p class="largeFont">The Structure of An Atom</p>
+			<p>Now that we have talked about matter, let's see what an atom is composed of. When you look at an atom, you see spacce. Nothing much more.
+				There is a nucleus that accounts for almost all of the mass in the atom, containing the protons and the neutrons. The nucleus is a positively charged particle that was discovered by Rutherford with his gold-foil experiment. Electrons weigh almost nothing and float around the nucleus in different energy levels. The outermost energy level is the "valence level", with the electrons contained on this level called "valence electrons."<br><br><img align="left"  style="padding-right: 20px" src="../res/AtomicStructure/electrons.jpeg">This is an example of a Potassium atom. In reality, the nucleus would be in place of where the "K" is right now. The number of valence electrons
+				determines which group on the periodic table the element is in. Groups are the vertical columns on the table and periods are the horizontal
+				ones. In this case, we have 1 valence electron in the atom. This is the same for all Potassium atoms. 1 valence electron would mean it is 
+				in Group 1 of the periodic table. This shows that most of an atom is empty space. Think of an atom to be the universe. The nucleus would be the black hole at the very center and the electrons are all the planets in the universe. Compared to the black hole, the planets weigh nothing.<br>What are quarks and leptons then, if atoms are made of protons, neutrons, and electrons. After all, how could they be considered "fundamental parts of matter" if they aren't even in an atom.</p>
+		</div>
+		<div class="container jumbotron" id="quark">
+			<p class="largeFont">Quarks</p>
+			<p>A quark is a simple form of matter that combines to form hadrons. A hadron, you might ask, is a comination of quarks with 2 families: baryons and mesons. Baryons are made up of 3 quarks and form protons andneutrons, while mesons are made up of one quark and one antiquark. Quarks come in 6 types, or "flavours." These types are Up, Down, Strage, Charm, Top, and Bottom. Every type of quark has a corresponding antiquark, such as an up quark and up antiquark. Protons are made up of 2 up quarks and 1 down quark. Similarly, an antiproton is made up of 2 up antiquarks and 1 down antiquark. Up and Down quarks are the lightest as the heavier types of quarks are subject to particle decay. We have only found out about them through particle accelerators and cosmic rays. After going through the particle decay, these flavours of quarks become Up and Down quarks.</p>
+		</div>
+		<p align="right" id="BackToTop" style="padding-right: 20px">Back to Top <a href="#"><span class="glyphicon glyphicon-circle-arrow-up"></span></a></p>
 	</body>
 </html>

@@ -31,3 +31,11 @@ a:visited{
 a:hover{
 	color: black;
 }
+div.test{
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	position: absolute;
+	top: 0;
+	left: 0;
+}

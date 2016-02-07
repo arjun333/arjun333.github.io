@@ -41,4 +41,22 @@ function onload (){
 	}
 	physics();
 	chemistry();
+
+	var $div = $('div.test');
+	$(document).keydown(function(e) {
+	    switch (e.which) {
+		    case 37:
+		        $div.css('left', $div.offset().left - 10);
+		        break;
+		    case 38:
+		        $div.css('top', $div.offset().top - 10);
+		        break;
+		    case 39:
+		        $div.css('left', $div.offset().left + 10);
+		        break;
+		    case 40:
+		        $div.css('top', $div.offset().top + 10);
+		        break;
+	    }
+	})
 }

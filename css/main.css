@@ -1,0 +1,33 @@
+body{
+	background-image: url("../res/bg.jpg");
+}
+#physics{
+	margin: 100px 150px;
+	width: 350px;
+	height: 450px;
+	background-color: #cccccc;
+	float: left;
+	box-shadow: 2px 5px 5px black;
+	opacity: 0.65;
+}
+#chemistry{
+	margin: 100px 200px;
+	width: 350px;
+	height: 450px;
+	background-color: #cccccc;
+	float: right;
+	box-shadow: 2px 5px 5px black;
+	opacity: 0.65;
+}
+.largeFont{
+	font-size: 5em!important;
+}
+a:link{
+	color: black;
+}
+a:visited{
+	color: black;
+}
+a:hover{
+	color: black;
+}

@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Physics and Chemistry</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<link href='https://fonts.googleapis.com/css?family=Overlock+SC' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Exo:500' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
-		<script src="js/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	</head>
-	<body>
-		<div class="main">
-			<div id="navbar" style="margin:auto">
-				<ul>
-					<li><a href="#" class="current">Test</a></li>
-					<li><a href="#">Test2</a></li>
-				</ul>
-			</div>
-			<br><br><br>
-			<p class="largeFont" align="center">All the Science Help You Need</p>
-			<p align="center" style="font-size: 3em">arjunscience.github.io</p>
-			<br><br>
-			<div align="center" class="try">
-				<p align="center" style="font-size: 2em;font-family: 'Ubuntu';color: #cccccc">Try Now!</p>
-			</div>
-			<br><br><br>
-		</div>
-		<script src="js/main.js"></script>
-	</body>
+
+<head>
+    <title>Physics and Chemistry</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Overlock+SC' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Exo:500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '851923634951397',
+            xfbml: true,
+            version: 'v2.6'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="main">
+        <div id="navbar" style="margin:auto">
+            <ul>
+                <li><a href="#" class="current">Test</a></li>
+                <li><a href="#">Test2</a></li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p class="largeFont" align="center">All the Science Help You Need</p>
+        <p align="center" style="font-size: 3em">arjunscience.github.io</p>
+        <br>
+        <br>
+        <div align="center" class="try">
+            <p align="center" style="font-size: 2em;font-family: 'Ubuntu';color: #cccccc">Try Now!</p>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

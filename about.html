@@ -34,23 +34,30 @@
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <h2>buySense</h2>
                 <img src="images/logo.png" style="width: 15%; margin-left: 2%">
-                <a class="login" href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=http%3A%2F%2Fwww.ebay.com%2F" target="_blank" style="margin-left: 60%" onclick="login()">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Login to eBay</button>
-                </a>
                 <h6 class="loginText" style="margin-left: 45%">Logged in as epicshaunak@gmail.com</h6>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                <a href="#" class="mdl-layout__tab is-active">Home</a>
+                <a href="index.html" class="mdl-layout__tab">Home</a>
                 <a href="main.html" class="mdl-layout__tab">Recommended</a>
                 <a href="stats.html" class="mdl-layout__tab">Statistics</a>
-                <a href="about.html" class="mdl-layout__tab">About</a>
+                <a href="#" class="mdl-layout__tab is-active">About</a>
             </div>
         </header>
         <main class="mdl-layout__content mdl-color--grey-100">
-            <div style="position: relative;color:#323232; height: 15%">
-                <img style="position: absolute;width: 100%" src="images/background.jpg">
+            <div class="mdl-layout__tab-panel is-active" id="about">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--8-col" style="margin-left: 10%">
+                        <h3>What is this App?</h3>
+                        <h6>This app is meant to help recommend products a user should buy off eBay based on the environment in their house and previous purchases</h6>
+                        <br>
+                        <h3>What did we Use?</h3>
+                        <h6>This app was made using an Intel Edison board as well as a variety of Grove sensors, namely the temperature, sound, and light ones. We used a Node.js backend server to send data to our frontend. Also, the trigger for our program was an Alexa command that we programmed. Most importantly, we used the eBay API as a service to buy the products.</h6>
+                        <img src="images/board.jpg" style="float: top;">
+                        <h6>Intel Edision used for the IoT part of our hack.</h6>
+                    </div>
+                </section>
             </div>
         </main>
     </div>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>buySense</title>
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="userinfo.js"></script>
+    <style>
+    #view-source {
+        position: fixed;
+        display: block;
+        right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        z-index: 900;
+    }
+    </style>
+</head>
+
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                <h2>buySense</h2>
+                <img src="images/logo.png" style="width: 15%; margin-left: 2%">
+                <h6 class="loginText" style="margin-left: 45%">Logged in as epicshaunak@gmail.com</h6>
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+                <a href="index.html" class="mdl-layout__tab">Home</a>
+                <a href="main.html" class="mdl-layout__tab">Recommended</a>
+                <a href="#" class="mdl-layout__tab is-active">Statistics</a>
+                <a href="about.html" class="mdl-layout__tab">About</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content mdl-color--grey-100">
+            <div class="mdl-layout__tab-panel is-active" id="stats">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--12-col" style="margin-left: 10%">
+                        <div class="mdl-grid demo-content">
+                            <script type="text/javascript">
+                            var chart;
+
+                            function addData(value) {
+                                //chart.options.title.text = "New DataPoint Added at the end";
+                                chart.options.data[0].dataPoints.push({
+                                    y: parseInt(value)
+                                });
+                                chart.render();
+                                console.log(value + " was added");
+                            }
+
+                            function resetChart() {
+
+                                chart = new CanvasJS.Chart("chartContainer", {
+                                    title: {
+                                        text: "Temperature in Fahrenheit"
+                                    },
+                                    data: [{
+                                        type: "spline",
+                                        dataPoints: [{
+                                            y: 0
+                                        }]
+                                    }]
+                                });
+                                chart.render();
+                            }
+
+                            function ajax() {
+                                tempAverage = 0
+                                $.ajax({
+                                    url: "http://buysense.herokuapp.com",
+                                    method: "GET",
+                                    success: function(data) {
+                                        data = JSON.parse(data);
+                                        for (var i = 0; i < data.length; i++) {
+                                            tempAverage = tempAverage + (1000 * parseFloat(data[i].temp) / 7);
+                                            localStorage.setItem("tempAverage", tempAverage);
+                                            (function(i) {
+                                                setTimeout(function() {
+                                                    addData((data[i].temp * 1000) / 7);
+                                                }, 250 * i)
+                                            }(i));
+                                        }
+                                        tempAverage = tempAverage / (data.length + 1);
+                                        localStorage.setItem("tempAverage", tempAverage);
+                                        setInterval(function() {
+                                            $.ajax({
+                                                url: "http://buysense.herokuapp.com",
+                                                method: "GET",
+                                                success: function(data) {
+                                                    data = JSON.parse(data);
+                                                    data = data.reverse();
+                                                    addData((data[0].temp * 1000) / 7);
+                                                }
+                                            })
+                                        }, 250);
+                                    }
+                                });
+                            }
+
+                            var soundChart;
+
+                            function addSoundData(value) {
+                                //chart.options.title.text = "New DataPoint Added at the end";
+                                soundChart.options.data[0].dataPoints.push({
+                                    y: parseInt(value)
+                                });
+                                soundChart.render();
+                                console.log(value + " was added");
+                            }
+
+                            function resetSoundChart() {
+
+                                soundChart = new CanvasJS.Chart("sound", {
+                                    title: {
+                                        text: "Sound"
+                                    },
+                                    data: [{
+                                        type: "spline",
+                                        dataPoints: [{
+                                            y: 0
+                                        }]
+                                    }]
+                                });
+                                soundChart.render();
+                            }
+
+                            window.onload = function() {
+                                resetChart();
+                                resetSoundChart();
+                                resetLightChart();
+                                ajax();
+                                ajaxSound();
+                                ajaxLight();
+                            }
+
+                            function ajaxSound() {
+                                soundAverage = 0
+                                $.ajax({
+                                    url: "http://buysense.herokuapp.com",
+                                    method: "GET",
+                                    success: function(data) {
+                                        data = JSON.parse(data);
+                                        for (var i = 0; i < data.length; i++) {
+                                            (function(i) {
+                                                soundAverage = soundAverage + (35 * parseFloat(data[i].sound) + 60);
+                                                localStorage.setItem("soundAverage", soundAverage);
+                                                setTimeout(function() {
+                                                    addSoundData(35 * data[i].sound + 60);
+                                                }, 250 * i)
+                                            }(i));
+                                        }
+                                        soundAverage = soundAverage / (data.length + 1)
+                                        localStorage.setItem("soundAverage", soundAverage);
+                                        setInterval(function() {
+                                            $.ajax({
+                                                url: "http://buysense.herokuapp.com",
+                                                method: "GET",
+                                                success: function(data) {
+                                                    data = JSON.parse(data);
+                                                    data = data.reverse();
+                                                    addSoundData(35 * data[0].sound + 60);
+                                                }
+                                            })
+                                        }, 250);
+                                    }
+                                });
+                            }
+
+                            var lightChart;
+
+                            function addLightData(value) {
+                                //chart.options.title.text = "New DataPoint Added at the end";
+                                lightChart.options.data[0].dataPoints.push({
+                                    y: parseInt(value)
+                                });
+                                lightChart.render();
+                                console.log(value + " was added");
+                            }
+
+                            function resetLightChart() {
+
+                                lightChart = new CanvasJS.Chart("light", {
+                                    title: {
+                                        text: "Light in Lux"
+                                    },
+                                    data: [{
+                                        type: "spline",
+                                        dataPoints: [{
+                                            y: 0
+                                        }]
+                                    }]
+                                });
+                                lightChart.render();
+                            }
+
+                            function ajaxLight() {
+                                lightAverage = 0
+                                $.ajax({
+                                    url: "http://buysense.herokuapp.com",
+                                    method: "GET",
+                                    success: function(data) {
+
+                                        data = JSON.parse(data);
+
+                                        for (var i = 0; i < data.length; i++) {
+
+
+                                            (function(i) {
+                                                lightAverage = lightAverage + (parseFloat(data[i].light * 10000));
+                                                localStorage.setItem("lightAverage", lightAverage);
+                                                setTimeout(function() {
+                                                    addLightData(data[i].light * 10000);
+
+                                                }, 100 * i)
+                                            }(i));
+                                        }
+                                        lightAverage = lightAverage / (data.length + 1)
+                                        localStorage.setItem("lightAverage", lightAverage);
+
+
+                                        setInterval(function() {
+                                            $.ajax({
+                                                url: "http://buysense.herokuapp.com",
+                                                method: "GET",
+                                                success: function(data) {
+                                                    data = JSON.parse(data);
+                                                    data = data.reverse();
+                                                    addLightData(data[0].light * 10000);
+                                                }
+                                            })
+                                        }, 250);
+                                    }
+                                });
+                            }
+                            </script>
+                            <div id="chartContainer" style="width:100%; height:280px"></div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col" style="margin-left: 10%">
+                        <div class="mdl-grid demo-content">
+                            <div id="sound" style="width:100%; height:280px"></div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col" style="margin-left: 10%">
+                        <div class="mdl-grid demo-content">
+                            <div id="light" style="width:100%; height:280px"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <a href="https://github.com/arjunds/tinohacks" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Github</a>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

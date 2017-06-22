@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/carousel.css" />
     <link rel="shortcut icon" type="image/png" href="images/logo.png" />
     <link rel="apple-touch-icon" type="image/png" href="images/logo.png" />
     <noscript>
@@ -39,14 +40,64 @@
                 <li><a href="https://www.linkedin.com/company/onclass.org" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
             </ul>
         </nav>
-        <div id="main">
+        <div class="main">
             <article class="post featured">
                 <header class="major">
                     <h2>Redefining Education</h2>
-                    <p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam
-                        <br /> facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor
-                        <br /> amet nullam sed etiam veroeros.</p>
                 </header>
+                <div id="images" class="carousel slide" data-ride="carousel" data-interval="3200">
+                    <ol class="carousel-indicators">
+                        <li data-target="#images" data-slide-to="0" class="active"></li>
+                        <li data-target="#images" data-slide-to="1"></li>
+                        <li data-target="#images" data-slide-to="2"></li>
+                        <li data-target="#images" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/pic1.jpg" alt="Picture 1" style="width:100%;">
+                            <div class="carousel-caption" style="top: 45%; left: 2%">
+                                <p style="font-size: 20pt">One on One Tutoring</p>
+                                <p>Junior Rishikesh Balaji tutors at Cupertino library
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/pic2.jpg" alt="Picture 2" style="width:100%;">
+                            <div class="carousel-caption" style="top: 40%; left: 2%">
+                                <p style="font-size: 20pt">Interactive Group Sessions</p>
+                                <p>Junior George Wen tutors students for the upcoming ACT</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/pic3.jpg" alt="Picture 3" style="width:100%;">
+                            <div class="carousel-caption" style="top: 40%; left: 2%">
+                                <p style="font-size: 20pt">Innovative Methods to Learn</p>
+                                <p>Junior Vishnu Srinivasan tutors a student in AP Calculus
+                                    <br/> with Onclass developed Virtual Reality material.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/pic4.jpg" alt="Picture 4" style="width:100%;">
+                            <div class="carousel-caption" style="top: 10%; left: 60%; bottom: auto; right: auto;">
+                                <p style="font-size: 20pt">Get Help from Tutors
+                                    <br/> at Your Convienience</p>
+                                <p>Junior Jacob Jiao meets up with a student,
+                                    <br/>to help him for the ACT, at the
+                                    <br/>Cupertino library.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#images" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#images" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </article>
+            <article class="post featured">
                 <div>
                     <iframe height="491px" width="100%" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZV10jqrivYQ?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=1&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0"></iframe>
                 </div>
@@ -56,7 +107,7 @@
             </article>
             <article class="post featured">
                 <header>
-                    <h1><a href="#">Why Use Us?</a></h1>
+                    <h1>Why Use Us?</h1>
                     <span style="font-size: 100pt">1</span>
                     <span style="font-size: 100pt; margin-left: 230px">2</span>
                     <span style="font-size: 100pt; margin-left: 230px">3</span>
@@ -71,82 +122,60 @@
                         <br/><span>You can get help from your peers who have taken the classes you need help in, for free.</span></div>
                 </header>
             </article>
-            <section class=" posts ">
-                <article>
-                    <header>
-                        <span class="date ">April 22, 2017</span>
-                        <h2><a href="# ">Primis eget<br />
-                                        imperdiet lorem</a></h2>
-                    </header>
-                    <a href="# " class="image fit "><img src="images/pic03.jpg " alt=" " /></a>
-                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                    <ul class="actions ">
-                        <li><a href="# " class="button ">Full Story</a></li>
+        </div>
+        <br/>
+        <div class="main" style="background-color: #5e90e3">
+            <article class="post featured">
+                <h1 style="color: #4d4d4d">About Us</h1>
+                <div>
+                    <div style="position: absolute; left: 129.5px; top: 270px; width: 50px; height: 67px;" data-exact-height="67" data-content-padding-horizontal="0" data-content-padding-vertical="0">
+                        <div style="width: 50px; height: 67px;">
+                            <div style="position: relative; width: 50px; height: 67px;">
+                                <div></div><img style="width: 50px; height: 67px; object-fit: contain;" src="images/story.png"></div>
+                        </div>
+                    </div>
+                    <h2 style="color: #bfbfbf">OUR STORY</h2>
+                    <h4 style="color: #bfbfbf">Inspired by the indifference in resources available<br/> to students, a group of students created onclass in<br/> order to provide equal resources<br/> for the student population.</h4>
+                </div>
+                <br/>
+                <div>
+                    <div style="position: absolute; left: 129.5px; top: 500px; width: 50px; height: 67px;" data-exact-height="67" data-content-padding-horizontal="0" data-content-padding-vertical="0">
+                        <div style="width: 50px; height: 67px;">
+                            <div style="position: relative; width: 50px; height: 67px;">
+                                <div></div><img style="width: 50px; height: 67px; object-fit: contain;" src="images/vision.png"></div>
+                        </div>
+                    </div>
+                    <h2 style="color: #bfbfbf">OUR VISION</h2>
+                    <h4 style="color: #bfbfbf">We hope to create a self sustaining student society, <br/>with an abundance of resources and equal oppurtunities <br/>for anyone who is looking for study material.</h4>
+                </div>
+                <br/>
+                <div>
+                    <div style="position: absolute; left: 129.5px; top: 700px; width: 50px; height: 67px;" data-exact-height="67" data-content-padding-horizontal="0" data-content-padding-vertical="0">
+                        <div style="width: 50px; height: 67px;">
+                            <div style="position: relative; width: 50px; height: 67px;">
+                                <div></div><img style="width: 50px; height: 67px; object-fit: contain;" src="images/donation.png"></div>
+                        </div>
+                    </div>
+                    <h2 style="color: #bfbfbf">OUR STORY</h2>
+                    <h4 style="color: #bfbfbf">We are an organization with no source of income. <br/>However, if you could donate to our cause, it would help <br/>us a lot in improving our infrastructure as well as<br/> providing you with the best possible material.</h4>
+                    <ul class="actions">
+                        <li><a href="https://www.gofundme.com/onclass" class="button big">Donate</a></li>
                     </ul>
-                </article>
+                </div>
+            </article>
+        </div>
+        <br/>
+        <div class="main">
+            <article class="post featured">
+                <h1>Meet the Team</h1>
+            </article>
+            <section class="posts">
                 <article>
-                    <header>
-                        <span class="date ">April 18, 2017</span>
-                        <h2><a href="# ">Ante mattis<br />
-                                        interdum dolor</a></h2>
-                    </header>
-                    <a href="# " class="image fit "><img src="images/pic04.jpg " alt=" " /></a>
-                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                    <ul class="actions ">
-                        <li><a href="# " class="button ">Full Story</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date ">April 14, 2017</span>
-                        <h2><a href="# ">Tempus sed<br />
-                                        nulla imperdiet</a></h2>
-                    </header>
-                    <a href="# " class="image fit "><img src="images/pic05.jpg " alt=" " /></a>
-                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                    <ul class="actions ">
-                        <li><a href="# " class="button ">Full Story</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date ">April 11, 2017</span>
-                        <h2><a href="# ">Odio magna<br />
-                                        sed consectetur</a></h2>
-                    </header>
-                    <a href="# " class="image fit "><img src="images/pic06.jpg " alt=" " /></a>
-                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                    <ul class="actions ">
-                        <li><a href="# " class="button ">Full Story</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date ">April 7, 2017</span>
-                        <h2><a href="# ">Augue lorem<br />
-                                        primis vestibulum</a></h2>
-                    </header>
-                    <a href="# " class="image fit "><img src="images/pic07.jpg " alt=" " /></a>
-                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-                    <ul class="actions ">
-                        <li><a href="# " class="button ">Full Story</a></li>
-                    </ul>
+                    <h3>Vishnu Srinivasan</h3>
                 </article>
             </section>
-            <footer>
-                <div class="pagination ">
-                    <!--<a href="# " class="previous ">Prev</a>-->
-                    <a href="# " class="page active ">1</a>
-                    <a href="# " class="page ">2</a>
-                    <a href="# " class="page ">3</a>
-                    <span class="extra ">&hellip;</span>
-                    <a href="# " class="page ">8</a>
-                    <a href="# " class="page ">9</a>
-                    <a href="# " class="page ">10</a>
-                    <a href="# " class="next ">Next</a>
-                </div>
-            </footer>
         </div>
+        <br/>
         <footer id="footer">
             <section>
                 <form method="post" action="#">
@@ -204,6 +233,7 @@
     <script src="assets/js/skel.min.js "></script>
     <script src="assets/js/util.js "></script>
     <script src="assets/js/main.js "></script>
+    <script src="assets/js/bootstrap.js "></script>
 </body>
 
 </html>

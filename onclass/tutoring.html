@@ -1,6 +1,55 @@
 <!DOCTYPE HTML>
 <html>
+<head>
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: center;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+a {
+    color: #1e7ad3;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline }
+
+
+
+ }
+</style>
+</head>
 <head>
     <title>onclass</title>
     <meta charset="utf-8" />
@@ -23,6 +72,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li class="active"><a href="tutoring.html">Tutoring</a></li>
+       
             </ul>
             <ul class="icons">
                 <li><a href="https://www.facebook.com/onclass.org/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
@@ -33,149 +83,54 @@
         <div class="main">
             <section class="post">
                 <header class="major">
-                    <h1>Elements<br />
-									Reference</h1>
+                    <h1>Onclass Tutoring</h1>
+                    <p>Student volunteer tutors helping anyone for free
+                        <br /> 
+                        <br /> </p>
                 </header>
-                <h2>Text</h2>
-                <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, this is a <a href="#">link</a>.</p>
-                <hr />
-               
-                <h2>Table</h2>
-                <h3>Default</h3>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Background</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Item 1</td>
-                                <td>Ante turpis integer aliquet porttitor.</td>
-                            
-                            </tr>
-                            <tr>
-                                <td>Item 2</td>
-                                <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                              
-                            </tr>
-                            <tr>
-                                <td>Item 3</td>
-                                <td> Morbi faucibus arcu accumsan lorem.</td>
-                               
-                            </tr>
-                            <tr>
-                                <td>Item 4</td>
-                                <td>Vitae integer tempus condimentum.</td>
-                                
-                            </tr>
-                            <tr>
-                                <td>Item 5</td>
-                                <td>Ante turpis integer aliquet porttitor.</td>
-                           
-                            </tr>
-                        </tbody>
-                        
-                    </table>
-                </div>
-               
-                <h2>Form</h2>
-                <form method="post" action="#" class="alt">
-                    <div class="row uniform">
-                        <div class="6u 12u$(xsmall)">
-                            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-                        </div>
-                        <div class="6u$ 12u$(xsmall)">
-                            <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-                        </div>
-                        <div class="12u$">
-                            <div class="select-wrapper">
-                                <select name="demo-category" id="demo-category">
-                                    <option value="">- Category -</option>
-                                    <option value="1">Manufacturing</option>
-                                    <option value="1">Shipping</option>
-                                    <option value="1">Administration</option>
-                                    <option value="1">Human Resources</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="4u 12u$(small)">
-                            <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                            <label for="demo-priority-low">Low</label>
-                        </div>
-                        <div class="4u 12u$(small)">
-                            <input type="radio" id="demo-priority-normal" name="demo-priority">
-                            <label for="demo-priority-normal">Normal</label>
-                        </div>
-                        <div class="4u$ 12u$(small)">
-                            <input type="radio" id="demo-priority-high" name="demo-priority">
-                            <label for="demo-priority-high">High</label>
-                        </div>
-                        <div class="6u 12u$(small)">
-                            <input type="checkbox" id="demo-copy" name="demo-copy">
-                            <label for="demo-copy">Email me a copy</label>
-                        </div>
-                        <div class="6u$ 12u$(small)">
-                            <input type="checkbox" id="demo-human" name="demo-human" checked>
-                            <label for="demo-human">I am a human</label>
-                        </div>
-                        <div class="12u$">
-                            <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                        </div>
-                        <div class="12u$">
-                            <ul class="actions">
-                                <li>
-                                    <input type="submit" value="Send Message" class="special" />
-                                </li>
-                                <li>
-                                    <input type="reset" value="Reset" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
-                <hr />
-                <h2>Image</h2>
-                <h3>Fit</h3>
-                <span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
-                <div class="box alt">
-                    <div class="row 50% uniform">
-                        <div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-                        <div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-                        <div class="4u$"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-                        <!-- Break -->
-                        <div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-                        <div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-                        <div class="4u$"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-                        <!-- Break -->
-                        <div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-                        <div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-                        <div class="4u$"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-                    </div>
-                </div>
-                <h3>Left &amp; Right</h3>
-                <p><span class="image left"><img src="images/pic08.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
-                <p><span class="image right"><img src="images/pic09.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
-                <hr />
-                <h2>Box</h2>
-                <div class="box">
-                    <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus lorem ipsum dolor sit amet nullam. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor.</p>
-                </div>
-                <hr />
-                <h2>Preformatted</h2>
-                <pre><code>i = 0;
+<section class="main">
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tutors.." title="Type in a keyword">
 
-print 'It took ' + i + ' iterations to sort the deck.';
-</code></pre>
-            </section>
+<table id="myTable">
+  <tr class="header">
+    <th style="width:30%;">Tutor Names</th>
+    <th style="width:70%;">Description</th>
+    </tr>
+     <tr>
+    <td><a href="https://www.facebook.com/vishnunaga.srinivasan" target="_blank">Vishnu Srinivasan</a></td>
+    <td>APs taken are MacroEconomics, MicroEconomics, Physics C Mech and EM, Calculus BC, English Language, Psychology, Statistics, Environmental Science and US History. 99th Percentile in the ACT.
+    </td>
+    </tr>
+    <tr>
+    <td><a href="https://www.facebook.com/rishikesh.balaji.5" target="_blank">Rishikesh Balaji</a></td>
+    <td>APs taken are Computer Science, Chemistry, Calculus AB and US History. 99th Percentile in the SAT.
+    </td>
+    </tr>
+    <tr>
+    <td> <a href="https://www.facebook.com/george.wen.5" target="_blank">George Wen</a></td>
+    <td>APs taken are English Language, Chemistry and US History. 99th Percentile in the ACT.
+    </td>
+    </tr>
+    <tr>
+    <td> <a href="https://www.facebook.com/oaiJacob" target="_blank">Jacob Jiao</a></td>
+    <td>APs taken are Calculus AB and US History. 99th Percentile in the ACT.
+    </td>
+    </tr>
+    <tr>
+    <td> <a href="https://www.facebook.com/michael.chen.98478672" target="_blank">Michael Chen</a></td>
+    <td>APs taken are Computer Science, Physics C Mech, Calculus BC, Chinese, Statistics and US History. 99th Percentile in the ACT.
+    </td>
+    </tr>
+    <tr>
+    <td> <a href="https://www.facebook.com/sohum.oza" target="_blank">Sohum Oza</a></td>
+    <td>APs taken are Physics C Mech, Calculus AB and English Language. 99th Percentile in the SAT.
+    </td>
+    </tr>
+   
+</table>
+
+               </section>
         </div>
         <footer id="footer">
             <section>
@@ -226,7 +181,6 @@ print 'It took ' + i + ' iterations to sort the deck.';
         <div id="copyright">
             <ul>
                 <li>&copy; onclass</li>
-            </ul>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
@@ -235,6 +189,26 @@ print 'It took ' + i + ' iterations to sort the deck.';
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
 </body>
 
 </html>

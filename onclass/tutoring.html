@@ -1,55 +1,57 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-
-<style>
+    <style>
 * {
-  box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+    
+    #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+    }
+    
+    #myTable th,
+    #myTable td {
+        text-align: center;
+        padding: 12px;
+    }
+    
+    #myTable tr {
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #myTable tr.header,
+    #myTable tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    a {
+        color: #1e7ad3;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline
+    }
 }
-
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
-
-#myTable th, #myTable td {
-  text-align: center;
-  padding: 12px;
-}
-
-#myTable tr {
-  border-bottom: 1px solid #ddd;
-}
-
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
-}
-
-a {
-    color: #1e7ad3;
-    text-decoration: none;
-}
-
-a:hover { text-decoration: underline }
-
-
-
- }
-</style>
+    </style>
 </head>
+
 <head>
     <title>onclass</title>
     <meta charset="utf-8" />
@@ -72,12 +74,11 @@ a:hover { text-decoration: underline }
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li class="active"><a href="tutoring.html">Tutoring</a></li>
-       
             </ul>
             <ul class="icons">
-                <li><a href="https://www.facebook.com/onclass.org/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="https://www.instagram.com/onclassofficial/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="https://www.linkedin.com/company/onclass.org" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://www.facebook.com/onclass.org/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/onclassofficial/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/company/onclass.org" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
             </ul>
         </nav>
         <div class="main">
@@ -85,52 +86,48 @@ a:hover { text-decoration: underline }
                 <header class="major">
                     <h1>Onclass Tutoring</h1>
                     <p>Student volunteer tutors helping anyone for free
-                        <br /> 
+                        <br />
                         <br /> </p>
                 </header>
-<section class="main">
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tutors.." title="Type in a keyword">
-
-<table id="myTable">
-  <tr class="header">
-    <th style="width:30%;">Tutor Names</th>
-    <th style="width:70%;">Description</th>
-    </tr>
-     <tr>
-    <td><a href="https://www.facebook.com/vishnunaga.srinivasan" target="_blank">Vishnu Srinivasan</a></td>
-    <td>APs taken are MacroEconomics, MicroEconomics, Physics C Mech and EM, Calculus BC, English Language, Psychology, Statistics, Environmental Science and US History. 99th Percentile in the ACT.
-    </td>
-    </tr>
-    <tr>
-    <td><a href="https://www.facebook.com/rishikesh.balaji.5" target="_blank">Rishikesh Balaji</a></td>
-    <td>APs taken are Computer Science, Chemistry, Calculus AB and US History. 99th Percentile in the SAT.
-    </td>
-    </tr>
-    <tr>
-    <td> <a href="https://www.facebook.com/george.wen.5" target="_blank">George Wen</a></td>
-    <td>APs taken are English Language, Chemistry and US History. 99th Percentile in the ACT.
-    </td>
-    </tr>
-    <tr>
-    <td> <a href="https://www.facebook.com/oaiJacob" target="_blank">Jacob Jiao</a></td>
-    <td>APs taken are Calculus AB and US History. 99th Percentile in the ACT.
-    </td>
-    </tr>
-    <tr>
-    <td> <a href="https://www.facebook.com/michael.chen.98478672" target="_blank">Michael Chen</a></td>
-    <td>APs taken are Computer Science, Physics C Mech, Calculus BC, Chinese, Statistics and US History. 99th Percentile in the ACT.
-    </td>
-    </tr>
-    <tr>
-    <td> <a href="https://www.facebook.com/sohum.oza" target="_blank">Sohum Oza</a></td>
-    <td>APs taken are Physics C Mech, Calculus AB and English Language. 99th Percentile in the SAT.
-    </td>
-    </tr>
-   
-</table>
-
-               </section>
+                <section class="main">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tutors.." title="Type in a keyword">
+                    <table id="myTable">
+                        <tr class="header">
+                            <th style="width:30%;">Tutor Names</th>
+                            <th style="width:70%;">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.facebook.com/vishnunaga.srinivasan" target="_blank">Vishnu Srinivasan</a></td>
+                            <td>APs taken are MacroEconomics, MicroEconomics, Physics C Mech and EM, Calculus BC, English Language, Psychology, Statistics, Environmental Science and US History. 99th Percentile in the ACT.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.facebook.com/rishikesh.balaji.5" target="_blank">Rishikesh Balaji</a></td>
+                            <td>APs taken are Computer Science, Chemistry, Calculus AB and US History. 99th Percentile in the SAT.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <a href="https://www.facebook.com/george.wen.5" target="_blank">George Wen</a></td>
+                            <td>APs taken are English Language, Chemistry and US History. 99th Percentile in the ACT.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <a href="https://www.facebook.com/oaiJacob" target="_blank">Jacob Jiao</a></td>
+                            <td>APs taken are Calculus AB and US History. 99th Percentile in the ACT.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <a href="https://www.facebook.com/michael.chen.98478672" target="_blank">Michael Chen</a></td>
+                            <td>APs taken are Computer Science, Physics C Mech, Calculus BC, Chinese, Statistics and US History. 99th Percentile in the ACT.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <a href="https://www.facebook.com/sohum.oza" target="_blank">Sohum Oza</a></td>
+                            <td>APs taken are Physics C Mech, Calculus AB and English Language. 99th Percentile in the SAT.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
         </div>
         <footer id="footer">
             <section>
@@ -171,9 +168,9 @@ a:hover { text-decoration: underline }
                 <section>
                     <h3>Social</h3>
                     <ul class="icons alt">
-                        <li><a href="https://www.facebook.com/onclass.org/" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-                        <li><a href="https://www.instagram.com/onclassofficial/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/company/onclass.org" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://www.facebook.com/onclass.org/" target="_blank" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/onclassofficial/" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/company/onclass.org" target="_blank" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
                     </ul>
                 </section>
             </section>
@@ -190,25 +187,24 @@ a:hover { text-decoration: underline }
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
-
+    function myFunction() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    </script>
 </body>
 
 </html>

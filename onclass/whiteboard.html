@@ -19,50 +19,58 @@
         <div id="header">
             <a href="index.html" class="logo">onclass</a>
         </div>
-        <nav id="nav">
+        <nav id="nav" style="width: 100%">
             <ul class="links">
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="resources.html">Resources</a></li>
                 <li><a href="tutoring.html">Tutoring</a></li>
             </ul>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/onclass.org/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/onclassofficial/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/company/onclass.org" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
         </nav>
-        <!--         <div class="main" style="height: 100%; width: 100%">
- -->
-        <div class="flex-container" id="sketchapp">
-            <header>
-                <h1><b>Collaborative Chalkboard</b></h1>
-            </header>
-            <div id="sketchContainer" class="article" style="width: 100%; border: 1px solid rgba(0,0,0,0.2);">
-                <center>
-                    <canvas id="sketch" color="#FFFFFF" style="\border:6px solid #ecf0f1;"></canvas>
-                </center>
+        <!-- <div class="main" style="height: 100%; width: 100%"> -->
+        <article class="post featured">
+            <div class="flex-container" id="sketchapp" style="max-width: 72rem; margin: 0 auto; background-color: #ffffff">
+                <header>
+                    <h1><b>Collaborative Chalkboard</b></h1>
+                </header>
+                <header>
+                    <div><b style="width: 100%">Toolbar</b>
+                        <div style="position:absolute;top:26%;left:3%">Choose Color</div>
+                        <div style="cursor:pointer;position:absolute;top:31%;left:5%;width:20px;height:20px;background:#27ae60;" class="color-picker" id="green"></div>
+                        <div style="cursor:pointer;position:absolute;top:31%;left:8%;width:20px;height:20px;background:#2980b9;" class="color-picker" id="blue"></div>
+                        <div style="cursor:pointer;position:absolute;top:31%;left:11%;width:20px;height:20px;background:#ff0000;" class="color-picker" id="red"></div>
+                        <div style="cursor:pointer;position:absolute;top:35%;left:5%;width:20px;height:20px;background:#f1c40f;" class="color-picker" id="yellow"></div>
+                        <div style="cursor:pointer;position:absolute;top:35%;left:8%;width:20px;height:20px;background:#d35400;" class="color-picker" id="orange"></div>
+                        <div style="cursor:pointer;position:absolute;top:35%;left:11%;width:20px;height:20px;background:#000000;" class="color-picker" id="black"></div>
+                        <div style="position:absolute;top:42%;left:3%;">Eraser</div>
+                        <div style="cursor:pointer;position:absolute;top:47%;left:5%;width:30px;height:30px;background:white;border:2px solid;" class="eraser" id="white"></div>
+                        <input type="button" class="clear" value="clear" id="clr" size="30" style="cursor:pointer;position:absolute;top:47%;left:10%;">
+                        <div style="position:absolute;top:56%;left:3%;">Change Brush Size</div>
+                        <input type="button" class="minus-size" value="-" id="change" size="30" style="cursor:pointer;position:absolute;top:60%;left:10%;">
+                        <input type="button" class="plus-size" value="+" id="change" size="30" style="cursor:pointer;position:absolute;top:60%; left:4%">
+                    </div>
+                </header>
+                <div id="sketchContainer" class="article" style="width: 100%; border: 1px solid rgba(0,0,0,0.2);">
+                    <center>
+                        <canvas id="sketch" color="#FFFFFF" style="\border:6px solid #ecf0f1;"></canvas>
+                    </center>
+                </div>
+                <!-- <nav class="nav"> -->
+                <!-- </nav> -->
             </div>
-            <!-- <nav class="nav"> -->
-            <div id="toolheader"><b>Toolbar</b></div>
-            <div>
-                <div style="position:absolute;top:26%;left:3%">Choose Color</div>
-                <div style="cursor:pointer;position:absolute;top:31%;left:5%;width:20px;height:20px;background:#27ae60;" class="color-picker" id="green"></div>
-                <div style="cursor:pointer;position:absolute;top:31%;left:8%;width:20px;height:20px;background:#2980b9;" class="color-picker" id="blue"></div>
-                <div style="cursor:pointer;position:absolute;top:31%;left:11%;width:20px;height:20px;background:#ff0000;" class="color-picker" id="red"></div>
-                <div style="cursor:pointer;position:absolute;top:35%;left:5%;width:20px;height:20px;background:#f1c40f;" class="color-picker" id="yellow"></div>
-                <div style="cursor:pointer;position:absolute;top:35%;left:8%;width:20px;height:20px;background:#d35400;" class="color-picker" id="orange"></div>
-                <div style="cursor:pointer;position:absolute;top:35%;left:11%;width:20px;height:20px;background:#000000;" class="color-picker" id="black"></div>
-                <div style="position:absolute;top:42%;left:3%;">Eraser</div>
-                <div style="cursor:pointer;position:absolute;top:47%;left:5%;width:30px;height:30px;background:white;border:2px solid;" class="eraser" id="white"></div>
-                <input type="button" class="clear" value="clear" id="clr" size="30" style="cursor:pointer;position:absolute;top:47%;left:10%;">
-                <div style="position:absolute;top:56%;left:3%;">Change Brush Size</div>
-                <input type="button" class="minus-size" value="-" id="change" size="30" style="cursor:pointer;position:absolute;top:60%;left:10%;">
-                <input type="button" class="plus-size" value="+" id="change" size="30" style="cursor:pointer;position:absolute;top:60%; left:4%">
-            </div>
-            <!-- </nav> -->
-            <!-- </div> -->
-            <footer>
-                <p style="margin: auto; text-align: center; font-size: 15px; color: black">&copy; Copyright onclass.org</p>
-            </footer>
-            <script src="assets/js/togetherjs.js"></script>
-            <script src="assets/js/jquery.js"></script>
-            <script src="assets/js/whiteboard.js"></script>
-        </div>
+        </article>
+        <footer>
+            <p style="margin: auto; text-align: center; font-size: 15px; color: black">&copy; Copyright onclass.org</p>
+        </footer>
+        <script src="assets/js/togetherjs.js"></script>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/whiteboard.js"></script>
+        <!-- </div> -->
+        <br>
         <footer id="footer">
             <section>
                 <form method="post" action="#">

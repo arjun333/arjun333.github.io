@@ -31,29 +31,10 @@
                 <li><a href="https://www.linkedin.com/company/onclass.org" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
             </ul>
         </nav>
-        <!-- <div class="main"> -->
-        <!-- <article class="post featured"> -->
-        <div class="flex-container" id="sketchapp" style="max-width: 72rem; margin: 0 auto; background-color: #ffffff">
+        <div class="flex-container" id="sketchapp" style="max-width: 72rem; margin: 0 auto; background-color: #5e90e3">
             <header>
                 <h1><b>Collaborative Chalkboard</b></h1>
             </header>
-            <!-- <nav class="navbar navbar-inverse">
-                <div class="navbar-header">
-                    <a href="#" class="navbar-brand">Toolbar</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <li class="dropdown">
-                        <ul class="nav navbar-nav">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Color <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div style="cursor:pointer;background:#27ae60;" class="color-picker" id="green"></div>
-                                </li>
-                            </ul>
-                        </ul>
-                    </li>
-                </div>
-            </nav> -->
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -92,6 +73,9 @@
                             <li>
                                 <a class="eraser">Eraser</a>
                             </li>
+                            <li>
+                                <a class="clear">Clear</a>
+                            </li>
                             <li><a class="plus-size">Increase Brush Size</a></li>
                             <li><a class="minus-size">Decrease Brush Size</a></li>
                         </ul>
@@ -101,38 +85,10 @@
                     </div>
                 </div>
             </nav>
-            <!-- <div class="container"> -->
-            <!-- <div class="row"> -->
-            <!-- <div class="col-sm-2"> -->
-            <!--             <div>
-                            <h2>Toolbar</h2>
-                            <div style="position:relative;left:3%">Choose Color</div>
-                            <div style="cursor:pointer;position:relative;left:25%;width:20px;height:20px;background:#27ae60;" class="color-picker" id="green"></div>
-                            <div style="cursor:pointer;position:relative;left:60%;width:20px;height:20px;background:#2980b9;" class="color-picker" id="blue"></div>
-                            <div style="cursor:pointer;position:relative;left:25%;width:20px;height:20px;background:#ff0000;" class="color-picker" id="red"></div>
-                            <div style="cursor:pointer;position:relative;left:60%;width:20px;height:20px;background:#f1c40f;" class="color-picker" id="yellow"></div>
-                            <div style="cursor:pointer;position:relative;left:25%;width:20px;height:20px;background:#d35400;" class="color-picker" id="orange"></div>
-                            <div style="cursor:pointer;position:relative;left:60%;width:20px;height:20px;background:#000000;" class="color-picker" id="black"></div>
-                            <div style="position:relative;left:3%;">Eraser</div>
-                            <div style="cursor:pointer;position:relative;left:45%;width:30px;height:30px;background:white;border:2px solid;" class="eraser" id="white"></div>
-                            <br>
-                            <input type="button" class="clear" value="clear" id="clr" size="30" style="cursor:pointer;position:relative;left:7%;">
-                            <div style="position:relative;top:56%;left:3%;">Change Brush Size</div>
-                            <input type="button" class="minus-size" value="-" id="change" style="cursor:pointer;position:relative">
-                            <input type="button" class="plus-size" value="+" id="change" style="cursor:pointer;position:relative;left:10%">
-                            <input type="button" value="Collaborate" onclick="TogetherJS(this); return false;" style="cursor: pointer; position: relative; left: 5%; margin-top: 10%">
-                        </div> -->
-            <!-- </div> -->
-            <!-- <div class="col-sm-10"> -->
-            <div id="sketchContainer" class="article" style="">
-                <canvas id="sketch" color="#FFFFFF" style="\border:6px solid #ecf0f1"></canvas>
+            <div id="sketchContainer" class="article" style="background-color: white">
+                <canvas id="sketch" color="#FFFFFF" style="/border:6px solid #ecf0f1"></canvas>
             </div>
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- </div> -->
         </div>
-        <!-- </article> -->
-        <!-- </div> -->
         <br>
         <footer id="footer">
             <section>
@@ -193,7 +149,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/togetherjs.js"></script>
-    <!-- <script src="assets/js/jquery.js"></script> -->
     <script src="assets/js/whiteboard.js"></script>
     <script src="assets/js/bootstrap.js"></script>
 </body>

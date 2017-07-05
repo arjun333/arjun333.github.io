@@ -199,7 +199,10 @@ $(document).ready(function() {
 
     // Clears the canvas:
     $('.clear').click(function() {
-        clear(true);
+        var m = confirm("Do you want to clear the picture?");
+        if (m) {
+            clear(true);
+        }
     });
 
     // Color-button functions:

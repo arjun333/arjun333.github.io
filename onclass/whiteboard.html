@@ -35,59 +35,58 @@
             <header>
                 <h1><b>Collaborative Chalkboard</b></h1>
             </header>
-            <!-- <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand">Toolbar</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Color <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div style="cursor:pointer;background:#27ae60;width:20px;height:20px; margin: auto;" class="color-picker" id="green"></div>
-                        </li>
-                        <li role="separator" class="divider"></li>
-                        <li>
-                            <div style="cursor:pointer;width:20px;height:20px;background:#2980b9; margin: auto;" class="color-picker" id="blue"></div>
-                        </li>
-                        <li role="separator" class="divider"></li>
-                        <li>
-                            <div style="cursor:pointer;width:20px;height:20px;background:#ff0000; margin: auto;" class="color-picker" id="red"></div>
-                        </li>
-                        <li role="separator" class="divider"></li>
-                        <li>
-                            <div style="cursor:pointer;width:20px;height:20px;background:#f1c40f;margin: auto;" class="color-picker" id="yellow"></div>
-                        </li>
-                        <li role="separator" class="divider"></li>
-                        <li>
-                            <div style="cursor:pointer;width:20px;height:20px;background:#d35400;margin: auto;" class="color-picker" id="orange"></div>
-                        </li>
-                        <li role="separator" class="divider"></li>
-                        <li>
-                            <div style="cursor:pointer;width:20px;height:20px;background:#000000;margin: auto;" class="color-picker" id="black"></div>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="eraser">Eraser</a>
-                </li>
-                <li>
-                    <a class="clear">Clear</a>
-                </li>
-                <li><a class="plus-size">Increase Brush Size</a></li>
-                <li><a class="minus-size">Decrease Brush Size</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a onclick="TogetherJS(this); return false;">Collaborate</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
- -->
-            <div id="sketchContainer" class="article" style="background-color: white">
-                <canvas id="sketch" color="#FFFFFF" style="/border:6px solid #ecf0f1"></canvas>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">Toolbar</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Color <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div style="cursor:pointer;background:#27ae60;width:20px;height:20px; margin: auto;" class="color-picker" id="green"></div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <div style="cursor:pointer;width:20px;height:20px;background:#2980b9; margin: auto;" class="color-picker" id="blue"></div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <div style="cursor:pointer;width:20px;height:20px;background:#ff0000; margin: auto;" class="color-picker" id="red"></div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <div style="cursor:pointer;width:20px;height:20px;background:#f1c40f;margin: auto;" class="color-picker" id="yellow"></div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <div style="cursor:pointer;width:20px;height:20px;background:#d35400;margin: auto;" class="color-picker" id="orange"></div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <div style="cursor:pointer;width:20px;height:20px;background:#000000;margin: auto;" class="color-picker" id="black"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="eraser">Eraser</a>
+                            </li>
+                            <li>
+                                <a class="clear">Clear</a>
+                            </li>
+                            <li><a class="plus-size">Increase Brush Size</a></li>
+                            <li><a class="minus-size">Decrease Brush Size</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a onclick="TogetherJS(this); return false;">Collaborate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="sketchContainer" style="background-color: white; height: 100%; width: 100%;max-width: 72rem">
+                <canvas id="sketch" style="position: relative;bottom:4.2%;right:1.3%;background-color: white;max-width: 72rem;"></canvas>
             </div>
         </div>
         <br>
